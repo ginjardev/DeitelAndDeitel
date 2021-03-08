@@ -15,54 +15,61 @@ public class NegativePositiveNegativeZero {
         System.out.println("Enter a number: ");
         int number5 = scanner.nextInt();
 
+        int positiveCounter = 0;
+        int negativeCounter = 0;
+        int zeroCounter = 0;
 
         if(number1 > 0){
-            System.out.println(number1 + " is a positive number");
+            positiveCounter = positiveCounter + 1;
         }
         if(number2 > 0){
-            System.out.println(number2 + " is a positive number");
+            positiveCounter = positiveCounter + 1;
         }
         if(number3 > 0){
-            System.out.println(number3 + " is a positive number");
+            positiveCounter = positiveCounter + 1;
         }
         if(number4 > 0){
-            System.out.println(number4 + " is a positive number");
+            positiveCounter = positiveCounter + 1;
         }
         if(number5 > 0){
-            System.out.println(number5 + " is a positive number");
+            positiveCounter = positiveCounter + 1;
         }
 
         if(number1 < 0){
-            System.out.println(number1 + " is a negative number");
+            negativeCounter = negativeCounter + 1;
         }
         if(number2 < 0){
-            System.out.println(number2 + " is a negative number");
+            negativeCounter = negativeCounter + 1;
         }
         if(number3 < 0){
-            System.out.println(number3 + " is a negative number");
+            negativeCounter = negativeCounter + 1;
         }
         if(number4 < 0){
-            System.out.println(number4 + " is a negative number");
+            negativeCounter = negativeCounter + 1;
         }
         if(number5 < 0){
-            System.out.println(number5 + " is a negative number");
+            negativeCounter = negativeCounter + 1;
         }
 
         if(number1 == 0){
-            System.out.println(number1 + " is zero ");
+            zeroCounter = zeroCounter + 1;
         }
         if(number2 == 0){
-            System.out.println(number2 + " is zero ");
+            zeroCounter = zeroCounter + 1;
         }
         if(number3 == 0){
-            System.out.println(number3 + " is zero ");
+            zeroCounter = zeroCounter + 1;
         }
         if(number4 == 0){
-            System.out.println(number4 + " is zero ");
+            zeroCounter = zeroCounter + 1;
         }
         if(number5 == 0){
-            System.out.println(number5 + " is zero ");
+            zeroCounter = zeroCounter + 1;
         }
+
+        System.out.println("Positive numbers count is " + positiveCounter);
+        System.out.println("Negative numbers count is " + negativeCounter);
+        System.out.println("Zero numbers count is " + zeroCounter);
 
     }
 }
