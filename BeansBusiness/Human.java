@@ -1,2 +1,4 @@
-package BeansBusiness;public class Human {
+package BeansBusiness;
+
+public class Human {
 }
