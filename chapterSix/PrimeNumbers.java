@@ -29,6 +29,7 @@ public class PrimeNumbers {
         }
 
     }
+    //method (b)
     public static boolean isPrimeNumber(int number){
         boolean isPrimeNumber = true;
         double checker = 2.0;
