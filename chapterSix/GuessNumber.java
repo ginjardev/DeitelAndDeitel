@@ -13,24 +13,21 @@ public class GuessNumber {
     public static void main(String[] args) {
         GuessNumber guessNumber = new GuessNumber();
         Scanner scanner = new Scanner(System.in);
-        int timer = -1;
-        int randomNumber;
-        while(timer != 0){
-            randomNumber = guessNumber.generateRandomNumber();
+        int randomNumber = guessNumber.generateRandomNumber();
+        int userGuess = 0;
+        while(userGuess != randomNumber){
             System.out.println("Guess a number between 1 and 1000: ");
-            int guess = scanner.nextInt();
-            if(guess == randomNumber){
+            userGuess = scanner.nextInt();
+            if(userGuess == randomNumber){
                 System.out.println("Congratulations. You guessed the number!");
-            }else if(guess != randomNumber){
-                if(guess > randomNumber){
+                System.out.println("Random Number is " + randomNumber);
+            }else{
+                if(userGuess > randomNumber){
                     System.out.println("Too high. Try again");
                 }else{
                     System.out.println("Too low. Try again");
                 }
             }
-            System.out.println("Press 1 to CONTINUE, 0 to EXIT");
-            timer = scanner.nextInt();
         }
-        System.out.println(guessNumber.generateRandomNumber());
     }
 }
