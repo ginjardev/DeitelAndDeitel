@@ -26,21 +26,15 @@ public class CrapsGameModified {
     }
     public static String chatter(){
         String chatter = "";
-        for (int i = 0; i < 3; i++) {
-            switch (i){
-                case 0:
-                    chatter = "Oh you're going for broke, huh?";
-                    System.out.println(chatter);
-                    break;
-                case 1:
-                    chatter = "Aw c'mon, take a chance!";
-                    System.out.println(chatter);
-                    break;
-                case 2:
-                    chatter = "You're up big. Now's the time to cash in your chips!";
-                    System.out.println(chatter);
-                    break;
-            }
+        if (bankBalance < 200) {
+            chatter = "Oh you're going for broke, huh?";
+            System.out.println(chatter);
+        } else if (bankBalance > 200 && bankBalance < 1000) {
+            chatter = "Aw c'mon, take a chance!";
+            System.out.println(chatter);
+        } else if (bankBalance > 1000) {
+            chatter = "You're up big. Now's the time to cash in your chips!";
+            System.out.println(chatter);
         }
         return chatter;
     }
@@ -60,18 +54,11 @@ public class CrapsGameModified {
             case SEVEN:
             case YO_LEVEN:
                 gameStatus = Status.WON;
-                bankBalance += playerWager;
-                System.out.println(bankBalance);
                 break;
             case SNAKE_EYES:
             case TREY:
             case BOX_CARS:
                 gameStatus = Status.LOST;
-                bankBalance -= playerWager;
-                System.out.println(bankBalance);
-                if(bankBalance == 0){
-                    System.out.println("Sorry, you busted!");
-                }
             default:
                 gameStatus = Status.CONTINUE;
                 myPoint = sumOfDice;
@@ -85,11 +72,18 @@ public class CrapsGameModified {
             }else if(sumOfDice == SEVEN){
                 gameStatus = Status.LOST;
             }
-            if(gameStatus == Status.WON){
-                System.out.println("Player wins");
-            }else{
-                System.out.println("Player loses");
+        }
+        if(gameStatus == Status.WON){
+            System.out.println("Player wins");
+            bankBalance += playerWager;
+        }else{
+            System.out.println("Player loses");
+            bankBalance -= playerWager;
+            if(bankBalance == 0){
+                System.out.println("Sorry, you busted!");
             }
         }
+        System.out.println("Bank Balance " + bankBalance);
+        chatter();
     }
 }
