@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/BankApp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Java@Semicolon/New folder" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/SQL" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/practise" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/chapterThree" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/gitTrial" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/practise" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/web_dev/classwork" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/web_dev/login-page" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/web_dev/mytodoapp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/web_dev/reactProjects" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/web_dev/users-app" vcs="Git" />
+  </component>
+</project>
