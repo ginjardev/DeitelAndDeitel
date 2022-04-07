@@ -36,7 +36,11 @@ public class HourlyEmployee extends Employee{
 
     @Override
     public double earnings() {
-        return getHours() * getWage();
+        if(getHours() <= 40){
+            return getHours() * getWage();
+        }else{
+            return 40 * getWage() + ((getHours() - 40) * getWage() * 1.5);
+        }
     }
 
     @Override
@@ -50,7 +54,7 @@ public class HourlyEmployee extends Employee{
     public static void main(String[] args){
 
         HourlyEmployee hourlyEmployee = new HourlyEmployee("Titus", "Tim", "SSN138945",
-                24, 2.5);
+                40, 2.5);
 
         System.out.println(hourlyEmployee);
 
