@@ -1,4 +1,4 @@
-package DeitelNDeitel.com.deitel;
+package oop;
 
 public class CommissionEmployee {
 
